@@ -5,23 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>PlainJS Todos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Datepicker - Default functionality</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+        $( "#datepicker" ).datepicker();
+    } );
+    </script>
+    <style>
+            * {
+              box-sizing: border-box;
+            }
+            
+            /* Create two equal columns that floats next to each other */
+            .column {
+              float: left;
+              width: 50%;
+              padding: 10px;
+              height: 300px; /* Should be removed. Only for demonstration */
+            }
+            
+            /* Clear floats after the columns */
+            .row:after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+            </style>
 </head>
 <body>
+        <div class="row">
+        <div class="column">
+    <h1>The Date Picker</h1>
 
-    <h1>The TodoList...</h1>
-
-    <h3>Input your todos</h3>
+    <h3>Input your dates</h3>
     <p>
-        <form>
-            <input type="text" />
+
+        
+        <form id="the-form">
+            <input id="datepicker" type="text" />
             <button type="submit">Submit</button>
         </form>
         
     </p>
-
-    <h3>Output the list of todos below</h3>
-    <ul></ul>
-    
+</div>
+<div class="column">
+    <h3>Your available dates</h3>
+    <ul id="list-of-todos"></ul>
+</div>
+</div>
     <script src="script.js"></script>
 </body>
 </html>
